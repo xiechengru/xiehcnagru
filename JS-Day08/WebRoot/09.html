@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    <title>复习</title>
+	    <style type="text/css">
+    	    .myclass {
+    	        border: 0px;
+    	    }
+    	</style>
+        <script src="js/jQuery1.11.1.js"></script>
+        <script src="js/jquery-migrate-1.2.0.js"></script>
+		<script type="text/javascript">
+			$(function(){
+			    /*  var data={"firstName": "John","lastName": "Mr"};
+			     $.each(data,function(i,dom){
+			       alert(dom);
+			     }); */
+
+
+
+				/* var data={
+						"people":[
+							{
+							"firstName": "张靓颖",
+							"lastName":"Mrs"
+							},
+							{
+							"firstName":"李小龙",
+							"lastName":"Mr"
+							}
+							]
+						};
+						
+			  $.each(data.people,function(i,dom){
+			      alert(dom.firstName+"\t"+dom.lastName);
+			  }); */	
+			  
+			  
+			  var data={
+			    "name": "中国",
+			    "province": [{
+			        "name": "黑龙江",
+			        "cities": {
+			            "city": ["哈尔滨", "大庆"]
+			        }
+			    }, {
+			        "name": "广东",
+			        "cities": {
+			            "city": ["广州", "深圳", "珠海"]
+			        }
+			    }, {
+			        "name": "台湾",
+			        "cities": {
+			            "city": ["台北", "高雄"]
+			        }
+			    }, {
+			        "name": "新疆",
+			        "cities": {
+			            "city": ["乌鲁木齐"]
+			        }
+			    }]
+			};
+			
+			$.each(data.province,function(i,dom){
+			   alert(dom.cities.city);
+			});
+						  
+			  
+			  		      
+		    });
+			
+			
+		</script>
+	</head>
+	<body>
+	    <center>
+	       
+        </center>
+	</body>
+</html>
+

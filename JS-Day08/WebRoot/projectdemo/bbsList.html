@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>课工场论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jQuery1.11.1.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.0.js"></script>
+    <script type="text/javascript">
+       $(function(){
+          $(".bbs header span").click(function(){
+               $(".post").show();
+          });
+          var imgs=new Array("tou01.jpg","tou02.jpg","tou03.jpg","tou04.jpg");
+          //将用户点击发布后，录入的标题信息，囊括进div容器
+          $(".btn").click(function(){
+              var titlecontent=$(".title").val();
+              var mytitle=$("<div>"+titlecontent+"</div>");
+           	//发帖者的头像
+          	 //随机数   [0,1)      0 1 2 3 
+           	 var index=Math.floor(Math.random()*4);
+           	  var myimg=$("<div><img src='images/"+imgs[index]+"'></img></div>");
+           	  
+           	  //构造板块和发布时间
+           	  var blackconent=$(".post select").val();
+           	  var date=new Date();//2017-7-1 11:22
+           	  var newdate=date.getFullYear()+"-"+date.getMonth()+1+"-"+date.getDate()+" "+date.getHours()+":"+date.getMinutes();
+           	  
+           	  var publishdate=newdate;
+           	  var mypub=$("<p><span>"+blackconent+"</span>&nbsp;&nbsp;&nbsp;<span>"+publishdate+"</span></p>");
+           	  
+           	  //4.构建一个空的li
+           	   var myli=$("<li></li>");
+           	   myli.append(myimg);
+             	myli.append(mytitle);
+             	myli.append(mypub);
+             	
+             	$(".bbs section ul").append(myli);
+             	 $(".post").hide();
+          });
+       
+       });
+    
+    </script>
+</head>
+<body>
+<div class="bbs">
+    <header><span>我要发帖</span></header>
+    <section>
+        <ul></ul>
+    </section>
+    <div class="post">
+        <input class="title" placeholder="请输入标题（1-50个字符）">
+        所属版块：<select><option>请选择版块</option><option>电子书籍</option><option>新课来了</option><option>新手报到</option><option>职业规划</option></select>
+        <textarea class="content"></textarea>
+        <input class="btn" value="发布">
+    </div>
+</div>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/bbs.js"></script>
+</body>
+</html>

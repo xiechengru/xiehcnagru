@@ -1,0 +1,45 @@
+--1.表单元素
+   一种：  <input type="">
+   2种：select option
+   3种： textarea
+ 2. $(selector)  $("div")   jquery对象
+    $(obj)       $(dom)   dom 转换成jquery
+    $("html")    var mydiv=$("<div>我是div</div>")  创建了一个节点
+
+3.删除节点
+  remove() :删除整个节点  包括节点，节点文本和事件
+  detache()  删除标签，节点文本，事件保留
+  empty()    只删除文本内容，标签保留
+
+4.要创建一个对象，有四种方式
+new 最低级别的级别
+工厂
+反射  Person.class
+clone
+5.json  
+定位：是一种数据交换格式
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      

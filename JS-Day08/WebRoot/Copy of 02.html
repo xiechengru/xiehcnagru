@@ -1,0 +1,33 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>复习</title>
+	<script type="text/javascript" src="js/jquery-migrate-1.2.0.js"></script>
+	<script type="text/javascript" src="js/jQuery1.11.1.js"></script>
+	<script>
+	//节点与属性的操作
+	//创建节点1.$(里面放标签元素例如：("li"))2.$(里面放DOM对象)3.$(里面放要创建的新标签要成对出现)
+	$(function(){
+		//使用第三种方法
+		//有时插入和创建等等其他的方法需要互用，所以创建一个变量名接一道
+		var myli=$("<li>我要上天</li>");
+		//有时插入和创建等等其他的方法需要互用，所以创建一个变量名接一道
+		
+		//插入节点的方法有2大部分内部插入和外部插入详细见224页
+		$("ul").append(myli);
+	
+	});
+	</script>
+	
+	</head>
+	<body>
+	   <ul>
+	   	<li>上海</li>
+	   	<li>北京</li>
+	    <li>山西</li>
+	   </ul>
+	</body>
+</html>
+
