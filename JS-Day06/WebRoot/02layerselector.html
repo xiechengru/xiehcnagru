@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>基本选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+	    $(function(){
+	       //后代:子元素的子元素也可以被锁定到
+	       //$("html body ul li").css("color","red");
+	       
+	       //子选择器   直接子元素 范围小一些
+	       //$("#bigbox>p").css("color","red");
+	       
+	       //相邻选择器 +   直接相邻，一般是后一个
+	       //$("ul+div").css("color","red");
+	       
+	       //同辈  ~
+	        $("#family~div").css("color","red");
+	       
+	    });
+       
+    </script>
+</head>
+    <body>	
+       <div id="family">
+          <div id="father"></div>
+          <div id="mother"></div>
+          <div id="samllthree"></div>
+       </div>
+    
+    
+       <ul>
+         <li class="myred">上海</li>
+         <li class="myred">北京</li>
+         <li id="gz">广州</li>
+       </ul>
+       <div id="bigbox">
+       	<p>我是p标签</p>
+            <div id="small">
+             
+                               我是小的div
+            </div>
+       </div>
+        <p>我是小武，我骄傲，我傲娇</p>
+    </body>
+</html>

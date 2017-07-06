@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>属性选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+	    $(function(){
+	    
+	      // $("[href='baidu.com']").css("color","red");
+	       
+	      // $("[href$='Driver']").css("color","red");
+	       
+	       $("[href*='com']").css("color","red");
+	    });
+       
+    </script>
+</head>
+    <body>	
+        <a href="baidu.com">去百度</a>
+        <a href="com.mysql.jdbc.Driver">新浪</a>
+        <p href="com.mysql.jdbc.Driver">我是p</p>
+    </body>
+</html>

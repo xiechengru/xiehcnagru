@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>过滤选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+	    $(function(){
+	      $(".myclass:visible").hide();
+				
+				$("a[href=#]").click(function(){
+				if($(this).text()=="简化"){
+						$(".myclass:visible").hide();
+						$(this).html("更多");
+					}else{
+						$(".myclass:hidden").show();
+						$(this).html("简化");
+					}
+				});
+		});
+       
+    </script>
+</head>
+    <body>	
+   		 <ul>
+				<li>联系我们</li>
+				<li>友情链接</li>
+				<li>团队风采</li>
+				<li>个人首页</li>
+				<li class="myclass">更多1</li>
+				<li class="myclass">更多2</li>
+				<li class="myclass">更多3</li>
+				<li>结尾</li>
+				<li><a href="#">更多</a></li>
+		</ul>
+    </body>
+</html>

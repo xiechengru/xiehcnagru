@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>过滤选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+	    $(function(){
+	       //基本过滤选择器   first last odd even
+	       //$("li:odd").css("color","red");
+	     
+	     
+	    //
+	   /*  $("li:eq(2)").css("color","red"); */
+	     // $("li").eq(2).css("color","red");
+	    /* $("li:gt(2)").css("color","red"); */
+	    
+	    //$(":header").css("color","red");
+	    /* $("[name=txtName]").focus();
+	    
+	    $(":focus").css("color","red"); */
+	    
+	    
+	    
+	    $("#run").click(function(){
+			  $("div:not(:animated)").animate({ width: "+=200" }, 1000);
+		});
+		
+		  $("#show").click(function(){
+		    $(":hidden").show(3000);
+		  });
+	    });
+       
+    </script>
+</head>
+    <body>	
+        <ul>
+             <li>农村包围城市</li>
+             <li>武装夺取政权</li>
+             <li>敌进我退，敌退我扰，敌疲我打</li>
+              <li>农村包围城市</li>
+             <li>武装夺取政权</li>
+             <li>敌进我退，敌退我扰，敌疲我打</li>
+        </ul>
+        <h2>过滤选择器专题</h2>
+        <input name="txtName" value="五一假期，我要学习"/>
+        <input type="hidden" value="我是隐藏的input"/>
+        <input type="button" id="show" value="点我显示一个p"/>
+        <!-- 伪造隐藏元素 -->
+        <p style="display:none;">我是隐藏的</p>
+        <button id="run">Run</button><div style="width:200px;height:200px;border:1px solid red;">我是div</div>
+    </body>
+</html>

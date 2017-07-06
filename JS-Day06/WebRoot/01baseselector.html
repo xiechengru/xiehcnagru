@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>基本选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+        /*
+          基本选择器：
+             1.交集(AB) 一个元素，必须保证AB两个属性同时具备。
+               $("input[name]").css("color", "red");
+             2.并集  (A,B,C) 满足任何一个逗号的分区都会被锁定
+              $("div,span").css("color", "red");
+             3.全局
+              $("*").css("color", "red");
+  
+
+ 
+        */
+        $(function () {
+             //$("ul#second").css("color", "red");
+       		 //并集选择器
+       		 //$("ul,div").css("color", "red");
+       		 //html
+       		 //$("*").css("color", "red");
+        });
+    </script>
+</head>
+    <body>	
+       <ul>
+         <li class="myred">上海</li>
+         <li class="myred">北京</li>
+         <li id="gz">广州</li>
+       </ul>
+       
+       <ul id="second">
+         <li class="myred">上海</li>
+         <li class="myred">北京</li>
+         <li id="gz">广州</li>
+       </ul>
+       <div>我是div</div>
+     
+    </body>
+</html>

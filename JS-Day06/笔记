@@ -1,0 +1,88 @@
+笔记----------------------------------------------
+ jquery（90%公司都在使用的一个前端js库）
+ 基于jquery，远远高于jquery
+ jquery
+ B
+ 
+ jquery
+ C
+ 
+ bootstrap
+ angular.js
+ vue.js
+ ext js
+ dwz
+ easyui
+ jquery ui
+ 
+ PC和移动端都可以使用
+ 
+ 5.jquery
+   锁定元素
+   
+  注册事件
+  
+  使用ajax发送异步请求
+  
+ 表单校验
+ 
+ 特效
+ 
+ 
+ js 设置css
+  dom.style.属性名="属性值";
+  dom.style.cssText={"键1":"值1","键2":"值2"};
+  
+  
+  <style type="text/css">
+  </style>
+  dom.className="";
+   
+ 
+ jquery光棒效果
+  鼠标悬停在哪个li上，背景颜色编程pink
+  
+ -----------------------
+ 2017年6月26日23:32:44
+ 1.设置元素的显示和隐藏
+ $(selector).show( );
+ $(selector).hide( );
+
+ 2.addClass方式设置样式
+ jQuery 对象.addClass([样式名]);
+ 
+ 3.“$”等同于“ jQuery ”
+  看1.11.1版本源代码的10299行
+  if ( typeof noGlobal === strundefined ) {
+	window.jQuery = window.$ = jQuery; 
+  }
+    链式操作
+   隐式迭代
+ 4.DOM对象和Jquery对象转换
+ 5.图片轮播简易版 (超范围)
+ ----------------------------
+ 1.jquery选择器
+ 基本选择器
+层次选择器
+属性选择器
+基本过滤选择器
+可见性过滤选择器
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
