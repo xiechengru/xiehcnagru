@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>New Web Project</title>
+		<style type="text/css">
+	.active{
+	    border: 1px solid red;
+	}
+	div{
+	    width: 150px;
+	    padding: 20px;
+	    border: 1px solid #444;
+	}
+</style>
+		<script src="js/jQuery1.11.1.js"></script>
+		<script src="js/jquery-migrate-1.2.0.js"></script>
+	    <script type="text/javascript">
+    	    $(function(){
+    	        $("span").click(function(){
+    	          $(this).addClass("active").siblings().removeClass("active");
+    	          $("#center_"+$(this).index()).show().siblings("div").hide();
+    	        }); 
+    	    });
+    	</script>
+		
+	</head>
+    <body>
+    <span class="active">tab1</span>
+    <span>tab2</span>
+    <span>tab3</span>
+    <span>tab4</span>
+     <div id="center_0">tab1对应的内容</div>
+      <div id="center_1" style="display: none">tab2对应的内容</div>
+       <div id="center_2" style="display: none">tab3对应的内容</div>
+       <div id="center_3" style="display: none">tab4对应的内容</div>
+       	
+    </body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>New Web Project</title>
+		<script type="text/javascript" src="js/jQuery1.11.1.js"></script>
+		<style type="text/css">
+        #mybigdiv {
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        #myid {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+		
+		<script type="text/javascript">
+				  //取消事件冒泡
+				  //第一道能力检测:分浏览器
+				$(function(){
+					//给大div注册事件
+					$("#mybigdiv").click(function(){
+						alert('我是大div');
+					});
+					
+					//小div
+					$("#myid").click(function(event){
+						alert('我是小div');
+						//UI工程师  能力检测
+						//判定浏览器引擎是IE还是其他浏览器(第一道         能力检测)
+				 	    event=event||window.event;
+					   //第二道能力检测     
+					   if(event.stopPropagation){//非IE浏览器
+						   event.stopPropagation();
+					   }else{
+					   	//IE浏览器
+							event.cancelBubble=true;
+					   }
+					});
+				});
+				
+		</script>
+	</head>
+	<body>
+       <div id="mybigdiv">我是大div
+          <div id="myid">我是小div</div>
+       </div>
+	</body>
+</html>
+

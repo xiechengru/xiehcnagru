@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>基本选择器</title>
+    <style type="text/css">      
+       
+    </style>
+    <script src="js/jQuery1.11.1.js"></script>
+    <script type="text/javascript">
+        /*
+        */
+        $(function () {
+                  $(window).resize(function() {
+					 $( "body" ).prepend( "<div>" + $( window ).width() + "</div>" );
+					 if($( window ).width()>700){
+					   $( "body" ).css("background","red");
+					 }else{
+						 $( "body" ).css("background","pink");
+					 }
+				  });
+        });
+   
+    </script>
+</head>
+    <body>	
+      
+    </body>
+</html>
